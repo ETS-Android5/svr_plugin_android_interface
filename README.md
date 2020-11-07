@@ -7,6 +7,7 @@ Contains some helper classes to facilitate application development and using of 
 * BluetoothUtils
 * BrightnessUtils
 * DeviceUtils
+* FotaUtils
 * LocaleUtils
 * PermissionUtils
 * ProximitySensorUtils
