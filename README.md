@@ -8,15 +8,15 @@ Contains some helper classes to facilitate application development and using of 
 * BrightnessUtils
 * DeviceUtils
 * FotaUtils
-* LocaleUtils
-* PermissionUtils
 * ProximitySensorUtils
 * StorageUtils
 * TimeUtils
 * VolumeUtils
-* WakeLockUtils
 * WifiDisplayUtils
 * WifiUtils
+
+依赖应用：com.ssnwt.vr.server(V901 2.0.0版本、S802 2.0.0版本)
+Dependent applications: com.ssnwt.vr.server (v901 2.0.0, S802 2.0.0)
 
 ## 用法示例 Sample  
 ```java
@@ -47,17 +47,6 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-    }
-
-    @Override protected void onResume() {
-        super.onResume();
-        androidInterface.getWifiUtils().resume();
-        androidInterface.getWifiUtils().searchWifi();
-    }
-
-    @Override protected void onPause() {
-        super.onPause();
-        androidInterface.getWifiUtils().pause();
     }
 
     @Override protected void onDestroy() {
