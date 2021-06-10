@@ -15,8 +15,17 @@ Contains some helper classes to facilitate application development and using of 
 * WifiDisplayUtils
 * WifiUtils
 
-依赖应用：com.ssnwt.vr.server(V901 2.0.0版本、S802 2.0.0版本)
+依赖应用：com.ssnwt.vr.server(V901 2.0.0版本、S802 2.0.0版本)  
 Dependent applications: com.ssnwt.vr.server (v901 2.0.0, S802 2.0.0)
+
+如果是从老版本升级到2.0.0，需要使用svr_plugin_android_api.aar替换svr_plugin_android_interface.aar，并删除以下文件：  
+If you are upgrading from the old version to 2.0.0, you need to use svr_plugin_android_api.aar replaces svr_plugin_android_interface.aar and delete the following file:
+```
+skybluetoothapi.aar
+skyupgrade.jar
+slf4j-api-1.7.25.jar
+zt-zip-1.14.jar
+```
 
 ## 用法示例 Sample  
 ```java
