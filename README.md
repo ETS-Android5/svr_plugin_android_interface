@@ -37,7 +37,21 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         androidInterface = AndroidInterface.getInstance();
-        androidInterface.init(getApplication());
+        androidInterface.init(getApplication(), new AndroidInterface.InitListener() {
+            @Override public void onInitialized() {
+                // All interfaces must be called after successful initialization.
+                L.d(TAG, "onInitialized");
+            }
+
+            @Override public void onReleased() {
+                L.d(TAG, "onReleased");
+            }
+
+            @Override public void onInitError() {
+                L.d(TAG, "onInitError");
+            }
+        });
+        // All interfaces must be called after successful initialization.
         androidInterface.getWifiUtils().setListener2(new WifiUtils.WifiListener2() {
 
             @Override public void onOpened(boolean b) {
